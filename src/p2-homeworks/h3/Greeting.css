@@ -1,0 +1,30 @@
+.someClass {
+    padding-left: 10px;
+}
+
+.total {
+    text-shadow: 0 0 3px #FF0000, 0 0 5px #ff0000;
+}
+
+.error {
+    color: red;
+}
+
+.button {
+    background-color: #000000;
+    border: none;
+    color: white;
+    padding: 6px 15px;
+    text-align: center;
+    font-size: 16px;
+    margin: 4px 2px;
+    opacity: 0.6;
+    transition: 0.3s;
+    display: inline-block;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.button:hover {
+    opacity: 1
+}

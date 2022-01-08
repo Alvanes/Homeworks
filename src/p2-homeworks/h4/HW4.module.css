@@ -1,0 +1,17 @@
+.blue {
+    width: 200px;
+    height: 25px;
+    border: 2px solid blue;
+    border-radius: 4px;
+}
+
+.column {
+    padding-left: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.testSpanError {
+    color: #ff0000;
+}
