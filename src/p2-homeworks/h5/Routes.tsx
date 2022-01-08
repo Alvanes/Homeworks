@@ -1,7 +1,7 @@
 import React from 'react'
 import PreJunior from "./pages/PreJunior";
 import Error404 from "./pages/Error404";
-import {Route, Routes} from "react-router-dom";
+import {Route, Routes, Navigate} from "react-router-dom";
 import JuniorPlus from "./pages/JuniorPlus";
 import Junior from "./pages/Junior";
 
@@ -15,7 +15,7 @@ function Routess() {
     return (
         <div>
             <Routes>
-                <Route path={'/'} element={<PreJunior/>}/>
+                <Route path='/' element={<Navigate to={PATH.PRE_JUNIOR} replace/>}/>
 
                 <Route path={PATH.PRE_JUNIOR} element={<PreJunior/>}/>
                 <Route path={PATH.JUNIOR} element={<Junior/>}/>
