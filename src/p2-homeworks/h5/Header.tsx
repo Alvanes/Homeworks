@@ -1,15 +1,15 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import {NavLink} from 'react-router-dom'
 import {PATH} from "./Routes";
-import "./Header.css"
+import "./Header.module.css"
 import 'animate.css';
 
 function Header() {
     return (
         <nav className={"animate__animated animate__fadeInLeft"}>
-         <Link to={PATH.PRE_JUNIOR} >Pre-Junior</Link>
-         <Link to={PATH.JUNIOR} >Junior</Link>
-         <Link to={PATH.JUNIOR_PLUS} >Junior-Plus</Link>
+         <NavLink to={PATH.PRE_JUNIOR} >Pre-Junior</NavLink>
+         <NavLink to={PATH.JUNIOR} >Junior</NavLink>
+         <NavLink to={PATH.JUNIOR_PLUS} >Junior-Plus</NavLink>
         </nav>
     )
 }

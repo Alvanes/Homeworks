@@ -1,0 +1,48 @@
+
+a:link, a:visited {
+    background-color: #f44336;
+    color: #000000;
+    font-weight: bold;
+    padding: 7px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    cursor:pointer
+}
+
+a:hover, a:active {
+    background-color: rgba(255, 0, 0, 0.41);
+}
+
+.block {
+    display: flex;
+    width: 500px;
+}
+
+.select {
+    background-color: #f44336;
+    color: rgba(0, 0, 0, 0.77);
+    font-weight: bold;
+    opacity: 1;
+    padding: 5px;
+    border-radius: 5px 5px 5px 5px;
+}
+div.header {
+    position: absolute;
+    margin-left: -200px;
+    margin-top: 5px;
+    opacity: 0;
+}
+
+div.block:hover div.header {
+    position: relative;
+    margin-left: 0;
+    opacity: 1;
+    transition-duration: 1500ms;
+
+
+}
+div.block:hover div.select {
+    opacity: 0;
+    transition-duration: 800ms;
+}
