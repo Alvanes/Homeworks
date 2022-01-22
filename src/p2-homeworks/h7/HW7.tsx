@@ -8,7 +8,7 @@ function HW7() {
     const [value, onChangeOption] = useState(arr[1])
 
     return (
-        <div>
+        <div className={"ddi"}>
             <hr/>
             homeworks 7
 
