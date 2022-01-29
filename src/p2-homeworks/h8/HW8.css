@@ -1,0 +1,23 @@
+.containerHW8 {
+    margin-left: 10px;
+    border: black solid 2px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    justify-items: center;
+    align-items: center;
+    grid-template-areas:
+    "names ages";
+    height: 30px;
+    width: 160px;
+}
+
+.names {
+    grid-area: names;
+}
+
+.ages {
+    grid-area: ages;
+}

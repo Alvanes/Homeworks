@@ -1,8 +1,13 @@
 import React, {useState} from 'react'
-import {homeWorkReducer} from './bll/homeWorkReducer'
-import SuperButton from '../h4/common/c2-SuperButton/SuperButton'
+import {homeWorkCheckAC, homeWorkReducer, homeWorkSortAC} from './bll/homeWorkReducer'
+import "./HW8.css"
+import SuperButton from "../Components/SuperButton";
 
-// export type UserType =
+export type UserType = {
+    _id: number,
+    name: string,
+    age: number
+}
 
 const initialPeople = [
     {_id: 0, name: 'Кот', age: 3},
@@ -14,32 +19,34 @@ const initialPeople = [
 ]
 
 function HW8() {
-    const [people, setPeople] = useState<any>(initialPeople) // need to fix any
+    const [people, setPeople] = useState<UserType[]>(initialPeople) // need to fix any
 
     // need to fix any
-    const finalPeople = people.map((p: any) => (
+    const finalPeople = people.map((p: UserType) => (
         <div key={p._id}>
-            some name, age
+            <div className="containerHW8">
+                <div className="names">{p.name}</div>
+                <div className="ages">{p.age}</div>
+            </div>
+
         </div>
     ))
 
-    const sortUp = () => setPeople(homeWorkReducer(initialPeople, {type: 'sort', payload: 'up'}))
+    const sort = (sorting: "up" | "down") => setPeople(homeWorkReducer(initialPeople, homeWorkSortAC(sorting)))
+    const sortAge = () => setPeople(homeWorkReducer(initialPeople, homeWorkCheckAC(18)))
 
     return (
         <div>
             <hr/>
             homeworks 8
 
-            {/*should work (должно работать)*/}
             {finalPeople}
 
-            <div><SuperButton onClick={sortUp}>sort up</SuperButton></div>
-            <div>sort down</div>
-            check 18
-
-            <hr/>
-            {/*для личного творчества, могу проверить*/}
-            {/*<AlternativePeople/>*/}
+            <div>
+                <SuperButton onClickCallback={() => sort("up")} text={"sort up"}/>
+                <SuperButton onClickCallback={() => sort("down")} text={"sort down"}/>
+                <SuperButton onClickCallback={sortAge} text={"sort 18"}/>
+            </div>
             <hr/>
         </div>
     )
